@@ -1,15 +1,14 @@
-
+// Kada učita stranicu, pripremi QR kod
 document.addEventListener('DOMContentLoaded', function() {
     
-    const googlePhotosLink = "svadba_qr_gold.png";
+    const googlePhotosLink = "https://photos.google.com/share/AF1QipOqgP14vbc_MCBZjcEvsDjSVeaPikrcUzQlXY_Hex9Nkv9JF0a_HksJRHf6QpvOJw?key=MVVmano4dW9SQTdJbGh4S1c1UERBeTZGenBMbXFn";
     const qrCodeImg = document.getElementById('qrCode');
     
-    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(googlePhotosLink)}`;
-    qrCodeImg.src = qrUrl;
-    
+    // Kada se klikne na QR kod, otvori Google Photos
     qrCodeImg.addEventListener('click', function() {
         window.open(googlePhotosLink, '_blank');
     });
     
-    qrCodeImg.title = "Klikni da otvoriš galeriju!";
+    // Dodaj tooltip
+    qrCodeImg.title = "Klikni ili skeniraj da otvoriš galeriju!";
 });
