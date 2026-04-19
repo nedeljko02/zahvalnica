@@ -4,37 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Захвалница - Јелена & Филип</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            background: #f0ebe0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 210 / 297;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .thank-you-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: #f0e8d8;
+            padding: 60px 50px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-frame {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 1;
+            background: #f5f1e8;
+            border: 4px solid #c4a050;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-caption {
+            margin-top: 25px;
+            font-size: 15px;
+            color: #5a5a5a;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            border-left: 2px solid rgba(196, 160, 80, 0.3);
+        }
+
+        .header-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .heart {
+            color: #c4a050;
+            font-size: 20px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #c4a050;
+            margin: 15px auto;
+        }
+
+        .thank-you-text {
+            font-size: 17px;
+            color: #5a5a5a;
+            line-height: 1.7;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .additional-text {
+            font-size: 14px;
+            color: #6a6a6a;
+            line-height: 1.6;
+            margin: 20px 0;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .footer-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .couple-names {
+            font-size: 24px;
+            color: #4a4a4a;
+            margin-bottom: 10px;
+        }
+
+        .wedding-date {
+            font-size: 16px;
+            color: #7a7a7a;
+        }
+
+        @media print {
+            body {
+                background: #f0ebe0;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            .thank-you-card {
+                border-radius: 0;
+                width: 100%;
+                height: 100%;
+                padding: 50px 50px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="hearts">♡ ♡ ♡</div>
-            <h1>Захвалница</h1>
-        </div>
-        
-        <div class="content">
-            <p class="thank-you-text">
-                Хвала што сте Вашим доласком<br>
-                улепшали наш дан
-            </p>
-            
-            <div class="divider"></div>
-            
-            <div class="qr-container">
-               <img id="qrCode" src="https://raw.githubusercontent.com/nedeljko02/zahvalnica/main/svadba_qr_gold.png" alt="QR код за галерију">
+        <div class="thank-you-card">
+            <div class="left-column">
+                <div class="qr-frame">
+                    <img src="https://github.com/nedeljko02/zahvalnica/blob/main/svadba_qr_gold.png" alt="QR код за галерију" class="qr-image">
+                </div>
+                <p class="qr-caption">Поделите Ваше успомене са нама!</p>
             </div>
-            
-            <p class="share-text">Поделите Ваше успомене са нама!</p>
-            
-            <div class="divider"></div>
-        </div>
-        
-        <div class="footer">
-            <div class="couple-names"><span class="gold-accent">♡</span> Јелена & Филип <span class="gold-accent">♡</span></div>
-            <div class="wedding-date">2. 5. 2026.</div>
+
+            <div class="right-column">
+                <div class="header-decoration">
+                    <span class="heart">♡</span>
+                    <span class="heart">♡</span>
+                    <span class="heart">♡</span>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <p class="thank-you-text">
+                    Хвала што сте Вашим доласком<br>
+                    улепшали наш дан
+                </p>
+                
+                <div class="divider"></div>
+                
+                <p class="additional-text">Ваше присуство нам пуно значи. <br>
+                    Надамо се да ћете се лепо провести и уживати</p>
+                
+                <div class="footer-section">
+                    <div class="couple-names">
+                        <span class="heart">♡</span> Јелена & Филип <span class="heart">♡</span>
+                    </div>
+                    <div class="wedding-date">2. 5. 2026.</div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
